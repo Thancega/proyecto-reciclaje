@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#e8f5e9, #fff);
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  width: 150px;
+  margin: 15px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.1em;
+  color: white;
+}
+
+.organico { background: #4caf50; }
+.reciclable { background: #2196f3; }
+.no { background: #424242; }
+
+@media (min-width: 768px) {
+  .opciones {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
