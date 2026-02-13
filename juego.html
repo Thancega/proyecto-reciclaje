@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConti | Juego de Separación de Residuos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="media/EcoConti.png" alt="Logo EcoConti">
+            <div class="logo-texto">
+                <h1>EcoConti</h1>
+                <p>Pequeñas acciones, gran impacto</p>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="objetivos.html">Nuestros objetivos</a></li>
+            <li><a href="juego.html" class="active">Juego</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="educacion">
+    <h2>Aprende a separar tus residuos</h2>
+    <p>Para cuidar nuestro planeta, es importante separar la basura correctamente.</p>
+</section>
+
+<section class="juego-container">
+    <h2>Juego: Clasifica la basura en los 3 tachos</h2>
+    <p>Arrastra cada residuo al tacho correcto.</p>
+
+    <!-- Residuos -->
+    <div class="residuos">
+        <div class="residuo" draggable="true" data-tacho="organico">Plátano 🍌</div>
+        <div class="residuo" draggable="true" data-tacho="reciclable">Botella de plástico 🥤</div>
+        <div class="residuo" draggable="true" data-tacho="no-reciclable">Pañuelo usado 🧻</div>
+        <div class="residuo" draggable="true" data-tacho="organico">Manzana 🍎</div>
+        <div class="residuo" draggable="true" data-tacho="reciclable">Lata 🥫</div>
+    </div>
+
+    <!-- Tachos -->
+    <div class="tachos">
+    <div class="tacho" id="organico">
+        <img src="media/tacho-organico.png" alt="Tacho orgánico">
+        <span>Orgánico</span>
+    </div>
+
+    <div class="tacho" id="reciclable">
+        <img src="media/tacho-reciclable.png" alt="Tacho reciclable">
+        <span>Reciclable</span>
+    </div>
+
+    <div class="tacho" id="no-reciclable">
+        <img src="media/tacho-no-reciclable.png" alt="Tacho no reciclable">
+        <span>No reciclable</span>
+    </div>
+</div>
+
+
+    <p id="mensaje" style="font-size: 1.2em; font-weight: 600; margin-top: 20px;"></p>
+    <button id="reiniciar">Reiniciar juego</button>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-contenido">
+
+        <div class="footer-col">
+            <h3>EcoConti</h3>
+            <p>Educación ambiental para un planeta más verde.</p>
+            <p>Proyecto educativo desarrollado por estudiantes.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Accesos rápidos</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="objetivos.html">Nuestros objetivos</a></li>
+                <li><a href="juego.html">Juego interactivo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>Huancayo, Junín, Perú</p>
+            <p>999 999 999</p>
+            <p>contacto@ecoconti.pe</p>
+        </div>
+
+    </div>
+
+    <!-- Créditos -->
+    <div class="footer-copy">
+
+        <p class="titulo-creditos">Proyecto desarrollado por</p>
+
+        <ul class="lista-creditos">
+            <li>Anquipa Chaupi Nahomi Nicole</li>
+            <li>Sota Quispe Sebastian Yojan</li>
+            <li>Anchiraico Aylas Joseph Jesús</li>
+            <li>Castro Rojas Jair Alexander</li>
+            <li>Cerrón López Hans Leonardo</li>
+            <li>Benites Montalvan Luis Augusto</li>
+        </ul>
+
+        <p class="copyright">
+            &copy; 2026 EcoConti. Todos los derechos reservados.
+        </p>
+
+    </div>
+</footer>
+<!-- IMPORTANTE: aquí llamamos al archivo externo -->
+<script src="juego.js"></script>
+
+</body>
+</html>
