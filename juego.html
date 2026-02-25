@@ -1,129 +1,296 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>EcoConti | Juego de Separación de Residuos</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tu CSS -->
     <link rel="stylesheet" href="estilos.css">
+
 </head>
 
 <body>
 
 <header class="header">
-    <nav class="navbar">
-        <div class="logo">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container">
+
+        <div class="logo d-flex align-items-center">
+
             <img src="media/EcoConti.png" alt="Logo EcoConti">
-            <div class="logo-texto">
+
+            <div class="logo-texto ms-2">
+
                 <h1>EcoConti</h1>
+
                 <p>Pequeñas acciones, gran impacto</p>
+
             </div>
+
         </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="objetivos.html">Nuestros objetivos</a></li>
-            <li><a href="juego.html" class="active">Juego</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="nav-links navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Inicio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="objetivos.html">Nuestros objetivos</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="juego.html">Juego interactivo</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contacto.html">Contacto</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
 </header>
 
-<main>
 
-<section class="educacion">
-    <h2>Aprende a separar tus residuos</h2>
-    <p>Para cuidar nuestro planeta, es importante separar la basura correctamente.</p>
+<main class="container mt-4">
+
+
+<section class="educacion text-center">
+
+<h2>Aprende a separar tus residuos</h2>
+
+<p>Para cuidar nuestro planeta, es importante separar la basura correctamente.</p>
+
 </section>
 
-<section class="juego-container">
-    <h2>Juego: Clasifica la basura en los 3 tachos</h2>
-    <p>Arrastra cada residuo al tacho correcto.</p>
 
-    <!-- Residuos -->
-    <div class="residuos">
-        <div class="residuo" draggable="true" data-tacho="organico">Plátano 🍌</div>
-        <div class="residuo" draggable="true" data-tacho="reciclable">Botella de plástico 🥤</div>
-        <div class="residuo" draggable="true" data-tacho="no-reciclable">Pañuelo usado 🧻</div>
-        <div class="residuo" draggable="true" data-tacho="organico">Manzana 🍎</div>
-        <div class="residuo" draggable="true" data-tacho="reciclable">Lata 🥫</div>
-    </div>
+<section class="juego-container text-center">
 
-    <!-- Tachos -->
-    <div class="tachos">
-    <div class="tacho" id="organico">
-        <img src="media/tacho-organico.png" alt="Tacho orgánico">
-        <span>Orgánico</span>
-    </div>
+<h2>Juego: Clasifica la basura en los 3 tachos</h2>
 
-    <div class="tacho" id="reciclable">
-        <img src="media/tacho-reciclable.png" alt="Tacho reciclable">
-        <span>Reciclable</span>
-    </div>
+<p>Arrastra cada residuo al tacho correcto.</p>
 
-    <div class="tacho" id="no-reciclable">
-        <img src="media/tacho-no-reciclable.png" alt="Tacho no reciclable">
-        <span>No reciclable</span>
-    </div>
+
+<!-- Residuos -->
+
+<div class="residuos row justify-content-center g-3 mt-3">
+
+<div class="col-6 col-md-3">
+<div class="residuo" draggable="true" data-tacho="organico">
+Plátano 🍌
+</div>
+</div>
+
+<div class="col-6 col-md-3">
+<div class="residuo" draggable="true" data-tacho="reciclable">
+Botella de plástico 🥤
+</div>
+</div>
+
+<div class="col-6 col-md-3">
+<div class="residuo" draggable="true" data-tacho="no-reciclable">
+Pañuelo usado 🧻
+</div>
+</div>
+
+<div class="col-6 col-md-3">
+<div class="residuo" draggable="true" data-tacho="organico">
+Manzana 🍎
+</div>
+</div>
+
+<div class="col-6 col-md-3">
+<div class="residuo" draggable="true" data-tacho="reciclable">
+Lata 🥫
+</div>
+</div>
+
 </div>
 
 
-    <p id="mensaje" style="font-size: 1.2em; font-weight: 600; margin-top: 20px;"></p>
-    <button id="reiniciar">Reiniciar juego</button>
+<!-- Tachos -->
+
+<div class="tachos row text-center mt-5">
+
+
+<div class="grupo-tacho col-12 col-md-4">
+
+<div class="tacho" id="organico">
+
+<img src="media/tacho-organico.png"
+data-cerrado="media/tacho-organico.png"
+data-abierto="media/tacho-organico-abierto.png"
+alt="Tacho orgánico">
+
+</div>
+
+<p class="titulo-tacho">
+
+Orgánico
+
+</p>
+
+</div>
+
+
+
+<div class="grupo-tacho col-12 col-md-4">
+
+<div class="tacho" id="reciclable">
+
+<img src="media/tacho-reciclable.png"
+data-cerrado="media/tacho-reciclable.png"
+data-abierto="media/tacho-reciclable-abierto.png"
+alt="Tacho reciclable">
+
+</div>
+
+<p class="titulo-tacho">
+
+Reciclable
+
+</p>
+
+</div>
+
+
+
+<div class="grupo-tacho col-12 col-md-4">
+
+<div class="tacho" id="no-reciclable">
+
+<img src="media/tacho-no-reciclable.png"
+data-cerrado="media/tacho-no-reciclable.png"
+data-abierto="media/tacho-no-reciclable-abierto.png"
+alt="Tacho no reciclable">
+
+</div>
+
+<p class="titulo-tacho">
+
+No reciclable
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<p id="mensaje" style="font-size:1.2em;font-weight:600;margin-top:20px;"></p>
+
+
+<button id="reiniciar" class="btn btn-success mt-3">
+
+Reiniciar juego
+
+</button>
+
+
 </section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
-    <div class="footer-contenido">
 
-        <div class="footer-col">
-            <h3>EcoConti</h3>
-            <p>Educación ambiental para un planeta más verde.</p>
-            <p>Proyecto educativo desarrollado por estudiantes.</p>
-        </div>
 
-        <div class="footer-col">
-            <h4>Accesos rápidos</h4>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="objetivos.html">Nuestros objetivos</a></li>
-                <li><a href="juego.html">Juego interactivo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </div>
+<footer class="footer mt-5">
 
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p>Huancayo, Junín, Perú</p>
-            <p>999 999 999</p>
-            <p>contacto@ecoconti.pe</p>
-        </div>
+<div class="footer-contenido container">
 
-    </div>
+<div class="row">
 
-    <!-- Créditos -->
-    <div class="footer-copy">
 
-        <p class="titulo-creditos">Proyecto desarrollado por</p>
+<div class="footer-col col-md-4">
 
-        <ul class="lista-creditos">
-            <li>Anquipa Chaupi Nahomi Nicole</li>
-            <li>Sota Quispe Sebastian Yojan</li>
-            <li>Anchiraico Aylas Joseph Jesús</li>
-            <li>Castro Rojas Jair Alexander</li>
-            <li>Cerrón López Hans Leonardo</li>
-            <li>Benites Montalvan Luis Augusto</li>
-        </ul>
+<h3>EcoConti</h3>
 
-        <p class="copyright">
-            &copy; 2026 EcoConti. Todos los derechos reservados.
-        </p>
+<p>Educación ambiental para un planeta más verde.</p>
 
-    </div>
+<p>Proyecto educativo desarrollado por estudiantes.</p>
+
+</div>
+
+
+
+<div class="footer-col col-md-4">
+
+<h4>Accesos rápidos</h4>
+
+<ul>
+
+<li><a href="index.html">Inicio</a></li>
+
+<li><a href="objetivos.html">Nuestros objetivos</a></li>
+
+<li><a href="juego.html">Juego interactivo</a></li>
+
+<li><a href="contacto.html">Contacto</a></li>
+
+</ul>
+
+</div>
+
+
+
+<div class="footer-col col-md-4">
+
+<h4>Contacto</h4>
+
+<p>Huancayo, Junín, Perú</p>
+
+<p>999 999 999</p>
+
+<p>contacto@ecoconti.pe</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 EcoConti. Todos los derechos reservados.
+
+</p>
+
+
+</div>
+
 </footer>
-<!-- IMPORTANTE: aquí llamamos al archivo externo -->
+
+
+
 <script src="juego.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
+
